@@ -1,0 +1,25 @@
+/**
+ * Clase principal para ejecutar el juego y probar los enemigos.
+ */
+public class Juego {
+    /**
+     * Método principal que ejecuta el programa.
+     *
+     * @param args Argumentos de la línea de comandos.
+     */
+    public static void main(String[] args) {
+        // Crear enemigos representativos de cada grupo
+        EnemigoVolador dragon = new EnemigoVolador("Dragón", 100, 20, 50);
+        EnemigoAcuatico tiburon = new EnemigoAcuatico("Tiburón", 80, 15, 10);
+        EnemigoTerrestre golem = new EnemigoTerrestre("Gólem", 120, 25, 5);
+        EnemigoMagico hechicero = new EnemigoMagico("Hechicero", 60, 30, 40);
+        EnemigoGigante troll = new EnemigoGigante("Troll", 150, 35, 10);
+
+        // Polimorfismo: todos pueden atacar
+        dragon.atacar();
+        tiburon.atacar();
+        golem.atacar();
+        hechicero.atacar();
+        troll.atacar();
+    }
+}
